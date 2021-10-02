@@ -1,0 +1,1 @@
+https://www.codechef.com/START12C/problems/GOODWEAT/

@@ -16,7 +16,6 @@ int main() {
 	    {
 	        cin>>arr[i];
 	        
-	        
 	    }
 	    for(int i=1;i<=p;i++)
 	    {

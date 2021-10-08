@@ -21,6 +21,13 @@ This repository is open to all members of the GitHub community. Any member can c
 ***
 
 ## What is Hacktoberfest?
+Hacktoberfest, in its 8th year, is a month-long celebration of open source software run by DigitalOcean. During the month of October, we invite you to join open-source software enthusiasts, beginners, and the developer community by contributing to open-source projects. You can do this in a variety of ways:
+
+Prepare and share your project for collaboration
+Contribute to the betterment of a project via pull requests
+Organize an event
+Mentor others
+Donate directly to open source projects
 
 It is open to everyone in our global community. Whether you’re a developer, student learning to code, event host, or company of any size, you can help drive growth of open source and make positive contributions to an ever-growing community. All backgrounds and skill levels are encouraged to complete the challenge.
 
@@ -34,7 +41,9 @@ Hacktoberfest has a simple and plain motto
 
 So, yes! You can win a T-Shirt and few awesome stickers to attach on your laptop. On plus side, you will get into beautiful world of open source.<br>
 Working with open source project is a rewarding experience that allows you to practice your talent, collaborate with and learn from others, and give back to the developer community. 
+
 ### NOTE:
+* A pull request is considered approved once it has an overall approving review from maintainers, or has been merged by maintainers, or has been given the 'hacktoberfest-accepted' label.
 * making four (4) meaningful contributions to open source projects will qualify you for prizes
 * Scripts to be added in there respective folder with proper doumentaion.
 

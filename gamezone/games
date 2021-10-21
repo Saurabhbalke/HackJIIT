@@ -1,0 +1,290 @@
+def ngame():
+    
+    print("------------------------")
+    print("| NUMBER GUESSING GAME |")
+    print("------------------------")
+    
+    l1=int(input("Enter the lower limit of range : "))
+    
+    l2=int(input("Enter the upper limit of range : "))
+    
+    print("\n","-Enter 1 for playing 'ROULETTE'.","\n","-Enter 2 for playing 'WHO GUESSED RIGHT?'.")
+    
+    a=int(input("Enter your choice:"))
+    import random as rn
+    
+    if a==1:
+        print("ROULETTE")
+        ans="c"
+        
+        while ans=="c" or ans=="C":
+            lu = rn.randint(l1,l2)
+            b=int(input("Guess a number : "))
+            
+            if b==lu:
+                print("You Won!")
+                print("\n","Real Number : ",lu,"\n","Guessed Number : ",b)
+                ans=input("Enter C to continue or Enter S to stop : ")
+            
+            elif (b>=l1 and b<=l2) and b!=lu:
+                print("Wrong Guess!")
+                print("\n","Real Number : ",lu,"\n","Guessed Number : ",b)
+                ans=input("Enter C to continue or Enter S to stop : ")
+            
+            elif b<l1 or b>l2:
+                print("Entered number is out of range.")
+                ans=input("Enter C to continue or Enter S to stop : ")
+    
+    if a==2:
+        print("WHO GUESSED RIGHT?")
+        import random as rd
+        ans="c"
+        
+        while ans=="c" or ans=="C":
+            lu = rn.randint(l1,l2)
+            luc = rd.randint(l1,l2)
+            b=int(input("Guess a number : "))
+            
+            if (b>=l1 and b<=l2) and b==lu and luc!=lu:
+                print("You Won!")
+                print("\n","Real Number : ",lu,"\n","Guessed Number By you : ",b,"\n","Computer Guessed Number : ",luc)
+                ans=input("Enter C to continue or Enter S to stop : ")
+            
+            elif (b>=l1 and b<=l2) and b!=lu and luc==lu:
+                print("Computer Won!")
+                print("\n","Real Number : ",lu,"\n","Computer Guessed Number : ",luc,"\n","Guessed Number By you : ",b)
+                ans=input("Enter C to continue or Enter S to stop : ")
+            
+            elif (b>=l1 and b<=l2) and b==lu and luc==lu:
+                print("Draw!")
+                print("\n","Real Number : ",lu,"\n","Guessed Number By you : ",b,"\n","Computer Guessed Number : ",luc)
+                ans=input("Enter C to continue or Enter S to stop : ")
+            
+            elif (b>=l1 and b<=l2) and b!=lu and luc!=lu:
+                print("No one guessed correct.")
+                print("\n","Real Number : ",lu,"\n","Guessed Number By you : ",b,"\n","Computer Guessed Number : ",luc)
+                ans=input("Enter C to continue or Enter S to stop : ")
+            
+            elif b<l1 or b>l2:
+                print("Entered number is out of range.")
+                ans=input("Enter C to continue or Enter S to stop : ")
+    
+    if a!=1 and a!=2:
+        print("Invalid Entry!")
+    
+    return
+
+def sps():
+    
+    print(" ------------------------","\n","| STONE PAPER SCISSORS |","\n","------------------------")
+    print(" -Enter 0 for Stone.","\n","-Enter 1 for Paper.","\n","-Enter 2 for Scissors.")
+    x="Computer Won!"
+    y="You Won!"
+    import random as rn
+    a=int(input("Enter for how many points you have to play : "))
+    me=0
+    comp=0
+    
+    while me<a and comp<a:
+        
+        user=int(input("Enter : "))
+        cm= rn.randrange(0,3)
+            
+        if user==cm:
+                print("DRAW!!")
+                print("You :",me,"Computer :",comp)
+            
+        elif user==0:
+                if cm==1:
+                    print("Stone vs Paper")
+                    print(x)
+                    comp+=1
+                    print("You :",me,"Computer :",comp)
+                else: 
+                    print("Stone Vs Scissors")
+                    print(y)
+                    me+=1
+                    print("You :",me,"Computer :",comp)      
+            
+        elif user==1:
+                if cm==2:
+                    print("Paper vs Scissors")
+                    print(x)
+                    comp+=1
+                    print("You :",me,"Computer :",comp)
+                else: 
+                    print("Paper Vs Stone")
+                    print(y)
+                    me+=1
+                    print("You :",me,"Computer :",comp)    
+            
+        elif user==2:
+                if cm==0:
+                    print("Scissors Vs Stone")
+                    print(x)
+                    comp+=1
+                    print("You :",me,"Computer :",comp)
+                else: 
+                    print("Scissors Vs Paper")
+                    print(y)
+                    me+=1
+                    print("You :",me,"Computer :",comp)            
+            
+        else:
+            print("You Entered Something Wrong.")    
+        
+        if me==a:
+            print("You have won this game!")
+        
+        elif comp==a:
+            print("You Lost!")
+            print("Computer have won this game!")    
+            
+    return
+
+def wgame():
+    
+    import random as rn
+    print("----------------------")
+    print("| WORD GUESSING GAME |")
+    print("----------------------")
+    
+    animals=["alligator","bear","bee","camel","cat","cheetah","chicken","chimpanzee","cow","crocodile","deer","rat"
+             ,"scorpian","seal","shark","sheep","snail","snake","spider","squirrel","tiger","turtle","wolf","zebra"
+             ,"dog","dolphin","duck","eagle","elephant","fox","frog","giraffe","goat","hamster","hippopotamus",
+             "horse","kangaroo","lion","lobster","monkey","octopus","owl","panda","pig","rabbit"]
+    
+    colours = ["red","pink","orange","yellow","purple","green","blue","brown","white","grey","black","gold",
+               "silver","bronze","violet","indigo","magenta","cyan","turquoise","crimson"]
+    
+    fruits = ["apple","apricot","avocado","banana","blackberry","blueberry","cherry","cranberry","date","fig",
+              "grape","melon","kiwi","lemon","tomato","mango","mulberry","orange","peach","pear","pineapple",
+              "plum","pomegranate","raspberry","strawberry","watermelon"]
+    
+    sports = ["basketball","archery","athletics","badminton","baseball","volleyball","gymnastics","swimming",
+              "boxing","diving","fencing","football","golf","handball","hockey","judo","karate","cycling",
+              "rowing","rugby","sailing","shooting","skateboarding","surfing","tennis","weightlifting","wrestling"
+              ,"skiing","skating","snowboarding"]
+    
+    vegetables = ["asparagus","bean","beet","broccoli","cabbage","carrot","cauliflower","celery","corn","eggplant"
+                  ,"ginger","radish","kale","lettuce","mushroom","onion","pea","potato","spinach","bottleguard",
+                  "turnip","pumpkin","cucumber"]
+    
+    print("""Themes:
+1.Animals
+2.Colours
+3.Fruits
+4.Sports
+5.Vegetables\n""")
+    a=[animals,colours,fruits,sports,vegetables]
+    
+    b=int(input("Enter the theme number : "))
+    theme=a[b-1]
+    word=rn.choice(theme)
+    l=len(word)
+    
+    print("""Difficulty level:
+1.Beginner
+2.Intermediate
+3.Expert\n""")
+    
+    t=int(input("Enter the difficulty level number:"))
+    if t==1:
+        chances=l+2
+    elif t==2:
+        chances=l+1
+    elif t==3:
+        chances=l
+    elif t!=1 and t!=2 and t!=3:
+        print("Invalid Entry!")
+    guesses=''
+    
+    while chances>0:
+        f=0
+        for i in word:
+            if i in guesses:
+                print(i)
+            else:
+                print("#")
+                f+=1
+        
+        if f==0:
+            print("You Win")
+            print("The word is :",word)
+            break
+        guess=input("Guess a character:")
+        z=len(guess)
+        
+        if z==1:
+            guesses+=guess
+            if guess not in word:
+                chances-=1
+                print("Wrong guess.")
+                print("You have",chances,"more chances.")
+                if chances==0:
+                    print("You Lose.")
+                    print("The word was:",word)
+        
+        if z!=1:
+            print("You have entered more than one character.")
+            
+    return
+
+def end():
+    
+    print("Thanks For Playing!\n")
+    print("Hope You Enjoyed It.\n")
+    print("Made By Mukund Sarda XI-H")
+    
+    return
+
+def mukund():
+    
+    print("COMPUTER PROJECT")
+    print("Made By Mukund Sarda XI-H")
+    password=input("Enter the password : ")
+    pd="mukund@152@12790"
+    if password==pd:
+        print("Correct Password!")
+        print("Access Granted!")
+        
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("| WELCOME TO THE GAMING CENTRE |")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        
+        print("""Games:
+1.NUMBER GUESSING GAME
+2.STONE PAPER SCISSORS
+3.WORD GUESSING GAME
+# Press any character to quit.""")
+        gchoice=input("Enter the number corresponding the game you want to play : ")
+        if gchoice=='1':
+            ngame()
+            first=input("Enter Y if you want to this game again or any other character to quit : ")
+            if first=='Y' or first=='y':
+                ngame()
+            else:
+                end()
+        elif gchoice=='2':
+            sps()
+            sec=input("Enter Y if you want to this game again or any other character to quit : ")
+            if sec=='Y' or sec=='y':
+                sps()
+            else:
+                end()
+        elif gchoice=='3':
+            wgame()
+            third=input("Enter Y if you want to this game again or any other character to quit : ")
+            if third=='Y' or third=='y':
+                wgame()
+            else:
+                end()
+        else:
+            end()
+    else:
+        print("Incorrect Password!")
+        print("Access Denied!")
+        
+    return
+
+mukund()

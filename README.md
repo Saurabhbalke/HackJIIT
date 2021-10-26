@@ -45,7 +45,6 @@ Working with open source project is a rewarding experience that allows you to pr
 ### NOTE:
 * A pull request is considered approved once it has an overall approving review from maintainers, or has been merged by maintainers, or has been given the 'hacktoberfest-accepted' label.
 * making four (4) meaningful contributions to open source projects will qualify you for prizes
-* Scripts to be added in there respective folder with proper doumentaion.
 
 ***
 
